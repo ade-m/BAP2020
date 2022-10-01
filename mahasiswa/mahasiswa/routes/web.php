@@ -22,9 +22,9 @@ Route::controller(mahasiswaController::class)->group(function () {
     Route::get('/mahasiswa', 'index');
     Route::get('/mahasiswa/{id}', 'show');
     Route::post('/mahasiswa', 'store');
-    Route::get('/mahasiswa', 'create');
-    Route::delete('/mahasiswa', 'destroy');
-    Route::get('/mahasiswa', 'edit');
-    Route::put('/mahasiswa', 'update');
+    Route::get('/mahasiswa/new', 'create');
+    Route::delete('/mahasiswa/{id}', 'destroy');
+    Route::get('/mahasiswa/{id}', 'edit');
+    Route::put('/mahasiswa/{id}', 'update');
 });
     
