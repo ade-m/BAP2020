@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\krsController;
 use App\Http\Controllers\mahasiswaController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,4 +27,14 @@ Route::controller(mahasiswaController::class)->group(function () {
     Route::get('/mahasiswa/{id}', 'edit');
     Route::put('/mahasiswa/{id}', 'update');
 });
-    
+   
+
+Route::controller(krsController::class)->group(function () {
+    Route::get('/krs', 'index');
+    Route::get('/krs/{id}', 'show');
+    Route::post('/krs', 'store');
+    Route::get('/krs/new', 'create');
+    Route::delete('/krs/{id}', 'destroy');
+    Route::get('/krs/{id}', 'edit');
+    Route::put('/krs/{id}', 'update');
+});
